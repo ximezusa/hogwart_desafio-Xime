@@ -1,0 +1,30 @@
+<h1>Harry Potter</h1>
+<p>pelicula, ubicacion y casas</p>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Location</th>
+      <th scope="col">House</th>
+    </tr>
+  </thead>
+  <tbody>
+     <% @Character.each do |c|%>
+          <tr>
+         <th scope="row">
+           <%= c.id %>
+          </th>
+          <td>
+          <%= c.name %>
+          </td>
+          <td>
+          <%= c.location %>
+          </td>
+          <td>
+          <%= c.house %>
+          </td>
+          </tr>
+      <%end%>
+  </tbody>
+</table>
